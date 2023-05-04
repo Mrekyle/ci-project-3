@@ -97,7 +97,7 @@ STEP BY STEP INSTRUCTIONS
 
 - Stackoverflow - Problem Solving and generic issues
 - Google - Problem Solving
-- Slack Comminuty - Inspiration for the project
+- Slack Comminuty - Inspiration and assistance for the project
 - Mentor - Assistance along the way of the development of the project
 
 

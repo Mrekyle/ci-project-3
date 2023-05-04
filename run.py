@@ -200,7 +200,7 @@ def game_running(user):
         print(f"\nYou've lost to the hangman. Better luck next time {user.capitalize()}\n")
 
     if not game_restart():
-        print('why no work')
+        print()
 
 
 def game_restart():
