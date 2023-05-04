@@ -99,11 +99,25 @@ def select_random_word(word_list):
     return word.lower()
 
 
-def user_input():
+def user_input(user_guess):
     """
     Checks the users input and returns the correct outcome based on if 
     the users guess is in the current word. 
     """
+
+    while True:
+        try:
+            guess = input("Please take a guess:\n").lower()
+            if len(guess) != 1:
+                raise ValueError("Input Invalid. Please enter a single letter.")
+            elif guess in user_guess:
+                raise ValueError ("Sorry, you've' already tried that letter. Try again")
+            elif not guess.isalpha():
+                raise ValueError("Input is invalid. Please enter a letter.")
+            else: 
+                return guess
+        except ValueError as e:
+            print(e)
 
 
 def update_game_word():
