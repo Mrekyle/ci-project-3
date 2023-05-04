@@ -153,10 +153,34 @@ def display_current_game(wrong_guess, user_guess, hidden_word):
     print(" ".join(hidden_word))
 
 
-def game_running():
+def game_running(user):
     """
     Runs the main game, calling all relevent functions
     """
+
+    word_list = select_difficulty()
+    secret_word = select_random_word(word_list)
+    hidden_word = ["_" for _ in secret_word]
+    print(" ".join(hidden_word))
+
+    wrong_guess = 0
+    user_guess = []
+
+    while not game_won(hidden_word) and wrong_guess < 6:
+        guess = user_input(user_guess)
+        user_guess.append(guess)
+
+        if guess in secret_word:
+            print('Correct!')
+            hidden_word = update_game_word(guess, secret_word, hidden_word)
+        else:
+            print("Incorrect!")
+            wrong_guess += 1
+
+        display_current_game(wrong_guess, user_guess, hidden_word)
+
+        if wrong_guess == 5 and not game_won(hidden_word):
+            print(f"Final Chance: {user.capitalize()}!\n")
 
 
 def game_restart():
