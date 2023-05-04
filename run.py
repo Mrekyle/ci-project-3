@@ -1,4 +1,3 @@
-
 import hangman
 import random
 
@@ -12,6 +11,10 @@ def display_game_title():
 
     ]
 
+    for _ in logo:
+        print(col["orange_red"].format)
+
+
 def game_instructions():
     """
     Displays the games instructions based on the users input
@@ -19,18 +22,26 @@ def game_instructions():
 
     instructions = input('Would you like to see the games instructions Y/N? \n')
 
-    instructions_text = [
-        "First select a difficulty level. Beginner, Novice, Advanced, Insanity?\n",
-        "To win the game guess all the correct characters in the word\n",
-        "Correct guess reveals the letter\n",
-        "Wrong guess adds to the man being hung\n"
-    ]
+    while instructions.lower() not in ["y", "n"]:
+        instrictions = input("Enter 'y' to show gamne instructions of 'n' to skip.\n ")
+
+    if instructions.loweR() == "y":
+        instructions_text = [
+            "First select a difficulty level. Beginner, Novice, Advanced, Insanity?\n",
+            "To win the game guess all the correct characters in the word\n",
+            "Correct guess reveals the letter\n",
+            "Wrong guess adds to the man being hung\n"
+        ]
+        for _ in instructions_text:
+            print(cold["dark_orange"].format(_))
 
 
 def new_player():
     """
     Allows the player to enter a username for the game to begin
     """
+    
+    
 
 
 def select_difficulty():
