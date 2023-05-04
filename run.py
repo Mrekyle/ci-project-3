@@ -69,6 +69,25 @@ def select_difficulty():
     to this function to reset the game difficulty.
     """
 
+    while True:
+        try:
+            print()
+            difficulty = input("Please select your fate: beginner, novice, advanced or insanity\n").lower()
+            if difficulty not in ["beginner", "novice", "advanced", "insanity"]:
+                raise ValueError("There is a problem here, selected {diffulty} doesnt exist!\n Please select again.\n")
+            break
+        except ValueError as e:
+            print(e)
+
+    if difficulty == "beginner":
+        return hangman.beginner
+    elif difficulty == "novice":
+        return hangman.novice
+    elif difficulty == "advanced":
+        return hangman.advanced
+    else:
+        return hangman.insanity
+
 
 def select_random_word():
     """
