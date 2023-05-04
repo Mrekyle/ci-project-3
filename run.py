@@ -89,11 +89,14 @@ def select_difficulty():
         return hangman.insanity
 
 
-def select_random_word():
+def select_random_word(word_list):
     """
     Chooses a random word from the list based on what level of 
     difficulty has been selected by the user.
     """
+
+    word = random.choice(word_list)
+    return word.lower()
 
 
 def user_input():
