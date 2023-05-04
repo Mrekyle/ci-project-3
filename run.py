@@ -41,7 +41,24 @@ def new_player():
     Allows the player to enter a username for the game to begin
     """
     
-    
+    while True:
+        try:
+            print()
+            user = input("Please enter a valid name.")
+            if not user.strip():
+                raise ValueError("Please enter a valid name")
+            if " " in user:
+                raise ValueError("Name cannot contain spaces.")
+            if not user.isalnum():
+                raise ValueError("Name can only contain letters and numbers.")
+            if len(user) > 10:
+                raise ValueError("Name must not exceed 10 characters.")
+
+        except ValueError as e:
+            print(f"{e}")
+        else:
+            print("Welcome to the game {user}!")
+            return user
 
 
 def select_difficulty():
