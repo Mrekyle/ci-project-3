@@ -133,19 +133,24 @@ def update_game_word(guess, selected_word, hidden_word):
     return hidden_word
 
 
-def game_won():
+def game_won(hidden_word):
     """
     Checks if the game is won and returns a value based on if all the 
     correct letters have been guessed by the user.
     """
 
+    return "_" not in hidden_word
 
-def display_current_game():
+
+def display_current_game(wrond_guess, user_guess, hidden_word):
     """
     Displays the current state of the Hangman man. The current correct guesses
     and the current wrong guessed letters.
     """    
 
+    print(hangman.hangman_state[wrong_guesses])
+    print(f"Guessed Letters: { ', '.join(user_guess)}")
+    print(" ".join(hidden_word))
 
 def game_running():
     """
