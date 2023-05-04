@@ -172,6 +172,12 @@ def game_restart():
             break
         except ValueError as e:
             print(e)
+    
+    if user_play_again == 'n':
+        print("Thank you for playing!")
+        return False
+    else:
+        return True
 
 
 def main():
