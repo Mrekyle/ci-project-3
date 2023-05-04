@@ -164,6 +164,15 @@ def game_restart():
     select difficulty function and running the game all over again.
     """
 
+    while True:
+        try:
+            user_play_again = input("Would you like to play again? 'Y' or 'N'\n").lower()
+            if user_play_again not in ['y', 'n']:
+                raise ValueError("Input invalid. Please enter 'Y' or 'N'\n")
+            break
+        except ValueError as e:
+            print(e)
+
 
 def main():
     """
