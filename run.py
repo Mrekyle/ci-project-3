@@ -7,9 +7,7 @@ def display_game_title():
     Prints the logo for the game to the terminal.
     """
 
-    logo = [
-        'Hangman'
-    ]
+    logo = ["Welcome to Hangman!"]
 
     for _ in logo:
         print(logo)
@@ -45,7 +43,7 @@ def new_player():
     while True:
         try:
             print()
-            user = input("Please enter a valid name.")
+            user = input("Please enter a valid name: \n")
             if not user.strip():
                 raise ValueError("Please enter a valid name")
             if " " in user:
@@ -58,7 +56,7 @@ def new_player():
         except ValueError as e:
             print(f"{e}")
         else:
-            print("Welcome to the game {user}!")
+            print(f"Welcome to the game {user}!")
             return user
 
 
@@ -66,7 +64,7 @@ def select_difficulty():
     """
     Allows the user to select the difficulty of the hangman game
     and set the words accordingly. 
-    If a new game is selected at the end, then it will come back 
+    If a new game is selected at the end, then it will come back
     to this function to reset the game difficulty.
     """
 
@@ -75,7 +73,7 @@ def select_difficulty():
             print()
             difficulty = input("Please select your fate: beginner, novice, advanced or insanity\n").lower()
             if difficulty not in ["beginner", "novice", "advanced", "insanity"]:
-                raise ValueError("There is a problem here, selected {diffulty} doesnt exist!\n Please select again.\n")
+                raise ValueError(f"There is a problem here, selected {difficulty} difficulty doesnt exist!\nPlease select again.")
             break
         except ValueError as e:
             print(e)
@@ -110,11 +108,11 @@ def user_input(user_guess):
         try:
             guess = input("Please take a guess:\n").lower()
             if len(guess) != 1:
-                raise ValueError("Input Invalid. Please enter a single letter.")
+                raise ValueError(f"{guess} is invalid. Please enter a single letter.")
             elif guess in user_guess:
-                raise ValueError("Sorry, you've' already tried that letter. Try again")
+                raise ValueError(f"Sorry, you've' already tried {guess} before. Try again")
             elif not guess.isalpha():
-                raise ValueError("Input is invalid. Please enter a letter.")
+                raise ValueError(f"{guess} is invalid. Please enter a letter.")
             else: 
                 return guess
         except ValueError as e:
@@ -156,7 +154,10 @@ def display_current_game(wrong_guess, user_guess, hidden_word):
 
 def game_running(user):
     """
-    Runs the main game, calling all relevent functions
+    Runs the main game, selecting a random word from the words avalible in the hang man file.
+    Checking the users input and reacting based on the input
+    Checking if the game is won or lost and printing, 
+    relevent messages. 
     """
 
     word_list = select_difficulty()
@@ -181,20 +182,20 @@ def game_running(user):
         display_current_game(wrong_guess, user_guess, hidden_word)
 
         if wrong_guess == 5 and not game_won(hidden_word):
-            print(f"Final Chance {user.capitalize()}!\n")
+            print(f"Final Chance {user.upper()}!\n")
 
     if game_won(hidden_word):
         print()
         print("You've beaten the hangmans noose\n")
-        print(f"Your name is clear {user.upper()}\n")
-        print("You are free to go!")
+        print(f"Your name is clear {user.capitalize()}\n")
+        print("You are free to go!\n")
     else:
         print()
-        print("The word was:", secret_word)
-        print(f"You've lost to the hangman. Better luck next time {user.upper()}\n")
+        print("The word was:", secret_word.upper())
+        print(f"\nYou've lost to the hangman. Better luck next time {user.capitalize()}\n")
 
     if not game_restart():
-        print()
+        break
 
 
 def game_restart():
@@ -226,11 +227,11 @@ def main():
     the game
     """
     display_game_title()
+    print('\nThis is your chance to see if you have what it takes,')
+    print('To beat the Gallows! And survive your fate.')
+    print('Are you ready to play? Lets get going!\n')
     game_instructions()
     user = new_player()
-    print('This is your chance to see if you hhave what it takes/n')
-    print('To beat the Gallows!')
-    print('Are you ready to play? Lets get going!')
     game_running(user)
 
 

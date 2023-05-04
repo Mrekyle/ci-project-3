@@ -1,32 +1,27 @@
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
+# Hangman
 
-Welcome,
+Click here to see the live [Hangman Game](www.hangmaneditthis.com)
 
-This is the Code Institute student template for deploying your third portfolio project, the Python command-line project. The last update to this file was: **March 14, 2023**
+Hangman is a traditional game that has been around through the ages. Testing the knowledge of your opponents spelling. 
+Either played online against a computer or against a friend on paper. But this version is all online and built and designed to run 
+in the command line. Using Python programming language. 
 
-## Reminders
+Once the game has started the user is asked if they want to read the game instructions or just go ahead and play. 
+Once they have decided wether to read or ignore, the user wis prompted to enter a username for the game.
+They will then be asked what difficulty level they want to play 'Beginner, Novice, Advanced, Insanity'. All with 
+varying levels of difficulty. 
 
-- Your code must be placed in the `run.py` file
-- Your dependencies must be placed in the `requirements.txt` file
-- Do not edit any of the other files or your code may not deploy properly
+The user then goes ahead and does there best to guess the secret word that has been selected from the difficulty level.
+Trying to beat the gallows to win the game. 
 
-## Creating the Heroku app
+### Table of Contents
 
-When you create the app, you will need to add two buildpacks from the _Settings_ tab. The ordering is as follows:
-
-1. `heroku/python`
-2. `heroku/nodejs`
-
-You must then create a _Config Var_ called `PORT`. Set this to `8000`
-
-If you have credentials, such as in the Love Sandwiches project, you must create another _Config Var_ called `CREDS` and paste the JSON into the value field.
-
-Connect your GitHub repository and deploy as normal.
-
-## Constraints
-
-The deployment terminal is set to 80 columns by 24 rows. That means that each line of text needs to be 80 characters or less otherwise it will be wrapped onto a second line.
-
----
-
-Happy coding!
+1. How to play
+2. Logic Flow Chart
+3. Features
+4. Future Development
+5. Technologies Used
+6. Testing
+7. Bugs/Fixed Bugs
+8. Deployment
+9. Credits
