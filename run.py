@@ -180,7 +180,21 @@ def game_running(user):
         display_current_game(wrong_guess, user_guess, hidden_word)
 
         if wrong_guess == 5 and not game_won(hidden_word):
-            print(f"Final Chance: {user.capitalize()}!\n")
+            print(f"Final Chance {user.capitalize()}!\n")
+
+    if game_won(hidden_word):
+        print()
+        print("You've beaten the hangmans noose\n")
+        print(f"Your name is clear {user.upper()}\n")
+        print("You are free to go!")
+    else:
+        print()
+        print("The word was:", secret_word)
+        print(f"You've lost to the hangman. Better luck next time {user.upper()}\n")
+
+    if not game_restart():
+        break
+    
 
 
 def game_restart():
