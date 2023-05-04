@@ -8,11 +8,11 @@ def display_game_title():
     """
 
     logo = [
-
+        Hangman!!!!
     ]
 
     for _ in logo:
-        print(col["orange_red"].format)
+        print(logo)
 
 
 def game_instructions():
@@ -111,7 +111,7 @@ def user_input(user_guess):
             if len(guess) != 1:
                 raise ValueError("Input Invalid. Please enter a single letter.")
             elif guess in user_guess:
-                raise ValueError ("Sorry, you've' already tried that letter. Try again")
+                raise ValueError("Sorry, you've' already tried that letter. Try again")
             elif not guess.isalpha():
                 raise ValueError("Input is invalid. Please enter a letter.")
             else: 
@@ -142,15 +142,16 @@ def game_won(hidden_word):
     return "_" not in hidden_word
 
 
-def display_current_game(wrond_guess, user_guess, hidden_word):
+def display_current_game(wrong_guess, user_guess, hidden_word):
     """
     Displays the current state of the Hangman man. The current correct guesses
     and the current wrong guessed letters.
     """    
 
-    print(hangman.hangman_state[wrong_guesses])
+    print(hangman.hangman_state[wrong_guess])
     print(f"Guessed Letters: { ', '.join(user_guess)}")
     print(" ".join(hidden_word))
+
 
 def game_running():
     """
@@ -172,7 +173,7 @@ def game_restart():
             break
         except ValueError as e:
             print(e)
-    
+
     if user_play_again == 'n':
         print("Thank you for playing!")
         return False
@@ -187,5 +188,12 @@ def main():
     the game
     """
     display_game_title()
+    rules()
+    user = new_player()
+    print('This is your chance to see if you hhave what it takes/n')
+    print('To beat the Gallows!')
+    print('Are you ready to play? Lets get going!')
+    game_running(user)
 
-main()
+if __user__ == "__main__":
+    main()
