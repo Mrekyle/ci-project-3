@@ -120,11 +120,17 @@ def user_input(user_guess):
             print(e)
 
 
-def update_game_word():
+def update_game_word(guess, selected_word, hidden_word):
     """
     Updates the games word, based on the games selected word and users
     inputs.
     """
+
+    if guess in selected_word:
+        for i in range(len(selected_word)):
+            if selected_word[i] == guess:
+                hidden_word[i] = guess
+    return hidden_word
 
 
 def game_won():
