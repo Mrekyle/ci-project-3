@@ -8,7 +8,7 @@ def display_game_title():
     """
 
     logo = [
-        Hangman!!!!
+        'Hangman'
     ]
 
     for _ in logo:
@@ -23,9 +23,9 @@ def game_instructions():
     instructions = input('Would you like to see the games instructions Y/N? \n')
 
     while instructions.lower() not in ["y", "n"]:
-        instrictions = input("Enter 'y' to show gamne instructions of 'n' to skip.\n ")
+        instructions = input("Enter 'y' to show gamne instructions of 'n' to skip.\n ")
 
-    if instructions.loweR() == "y":
+    if instructions.lower() == "y":
         instructions_text = [
             "First select a difficulty level. Beginner, Novice, Advanced, Insanity?\n",
             "To win the game guess all the correct characters in the word\n",
@@ -33,7 +33,8 @@ def game_instructions():
             "Wrong guess adds to the man being hung\n"
         ]
         for _ in instructions_text:
-            print(cold["dark_orange"].format(_))
+            print("Lets Get Started")
+            break
 
 
 def new_player():
@@ -193,8 +194,7 @@ def game_running(user):
         print(f"You've lost to the hangman. Better luck next time {user.upper()}\n")
 
     if not game_restart():
-        break
-    
+        print()
 
 
 def game_restart():
@@ -226,12 +226,12 @@ def main():
     the game
     """
     display_game_title()
-    rules()
+    game_instructions()
     user = new_player()
     print('This is your chance to see if you hhave what it takes/n')
     print('To beat the Gallows!')
     print('Are you ready to play? Lets get going!')
     game_running(user)
 
-if __user__ == "__main__":
-    main()
+
+main()
