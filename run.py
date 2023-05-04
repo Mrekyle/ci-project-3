@@ -39,7 +39,7 @@ def new_player():
     """
     Allows the player to enter a username for the game to begin
     """
-    
+
     while True:
         try:
             print()
@@ -62,8 +62,9 @@ def new_player():
 
 def select_difficulty():
     """
-    Allows the user to select the difficulty of the hangman game
-    and set the words accordingly. 
+    Allows the user to select the difficulty 
+    of the hangman game
+and set the words accordingly.
     If a new game is selected at the end, then it will come back
     to this function to reset the game difficulty.
     """
@@ -90,7 +91,7 @@ def select_difficulty():
 
 def select_random_word(word_list):
     """
-    Chooses a random word from the list based on what level of 
+    Chooses a random word from the list based on what level of
     difficulty has been selected by the user.
     """
 
@@ -100,8 +101,9 @@ def select_random_word(word_list):
 
 def user_input(user_guess):
     """
-    Checks the users input and returns the correct outcome based on if 
-    the users guess is in the current word. 
+    Checks the users input and returns the 
+    correct outcome based on if the users 
+    guess is in the current word.
     """
 
     while True:
@@ -113,7 +115,7 @@ def user_input(user_guess):
                 raise ValueError(f"Sorry, you've' already tried {guess} before. Try again")
             elif not guess.isalpha():
                 raise ValueError(f"{guess} is invalid. Please enter a letter.")
-            else: 
+            else:
                 return guess
         except ValueError as e:
             print(e)
@@ -121,8 +123,8 @@ def user_input(user_guess):
 
 def update_game_word(guess, selected_word, hidden_word):
     """
-    Updates the games word, based on the games selected word and users
-    inputs.
+    Updates the games word, based on the games 
+    selected word and users inputs.
     """
 
     if guess in selected_word:
@@ -134,8 +136,9 @@ def update_game_word(guess, selected_word, hidden_word):
 
 def game_won(hidden_word):
     """
-    Checks if the game is won and returns a value based on if all the 
-    correct letters have been guessed by the user.
+    Checks if the game is won and returns a value 
+    based on if all the correct letters have been 
+    guessed by the user.
     """
 
     return "_" not in hidden_word
@@ -143,9 +146,10 @@ def game_won(hidden_word):
 
 def display_current_game(wrong_guess, user_guess, hidden_word):
     """
-    Displays the current state of the Hangman man. The current correct guesses
-    and the current wrong guessed letters.
-    """    
+    Displays the current state of the Hangman man. 
+    The current correct guesses and the current 
+    wrong guessed letters.
+    """
 
     print(hangman.hangman_state[wrong_guess])
     print(f"Guessed Letters: { ', '.join(user_guess)}")
@@ -154,10 +158,11 @@ def display_current_game(wrong_guess, user_guess, hidden_word):
 
 def game_running(user):
     """
-    Runs the main game, selecting a random word from the words avalible in the hang man file.
+    Runs the main game, selecting a random word from the words 
+    avalible in the hang man file.
     Checking the users input and reacting based on the input
-    Checking if the game is won or lost and printing, 
-    relevent messages. 
+    Checking if the game is won or lost and printing,
+    relevent messages.
     """
 
     word_list = select_difficulty()
@@ -195,12 +200,12 @@ def game_running(user):
         print(f"\nYou've lost to the hangman. Better luck next time {user.capitalize()}\n")
 
     if not game_restart():
-        break
+        print('why no work')
 
 
 def game_restart():
     """
-    Restarts the game based on the users input. Going back to the 
+    Restarts the game based on the users input. Going back to the
     select difficulty function and running the game all over again.
     """
 
@@ -213,17 +218,17 @@ def game_restart():
         except ValueError as e:
             print(e)
 
-    if user_play_again == 'n':
-        print("Thank you for playing!")
-        return False
-    else:
+    if user_play_again == 'y':
+        main()
         return True
+    elif user_play_again == 'n':
+        return False
 
 
 def main():
     """
-    This function calls all other functions to allow the game 
-    to be run more simply and easilly. Only calling one function to run 
+    This function calls all other functions to allow the game
+    to be run more simply and easilly. Only calling one function to run
     the game
     """
     display_game_title()
