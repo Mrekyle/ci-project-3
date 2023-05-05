@@ -69,7 +69,7 @@ TABLE TO GO HERE
 
 Once the game was completed and everything was running as intended. The code way put through CI pip8 Python testing. 
 
-<img src="" height="350px" width="400px" alt="Code Institute pip8 Testing">
+<img src="docs/pip8-testing.png" height="350px" width="400px" alt="Code Institute pip8 Testing">
 
 ### Bugs/Bug Fixes
 
