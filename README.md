@@ -1,6 +1,6 @@
 # Hangman
 
-Click here to see the live [Hangman Game](www.hangmaneditthis.com)
+Click here to see the live [Hangman Game](https://ci-project3.herokuapp.com/)
 
 Hangman is a traditional game that has been around through the ages. Testing the knowledge of your opponents spelling. 
 Either played online against a computer or against a friend on paper. But this version is all online and built and designed to run 
@@ -101,7 +101,7 @@ During the development there were many bugs despite the constant testing of the 
 
 <img src="docs/gamerestart-bug.png" height="300px" width="400px" alt="Code before re writing to fix the error">
 
-<img src="docs/gamerestart-bug-png" height="300px" width="400px" alt="Code after the re writing enabaling the bug to be removed">
+<img src="docs/gamerestart-bug.png" height="300px" width="400px" alt="Code after the re writing enabaling the bug to be removed">
 
 ### Deployment
 
@@ -114,6 +114,8 @@ GITHUB:
 
 Upon final build of code, a heroku app was created and by using the following steps, the game was deployed.
 
+HEROKU: 
+
 - Login to Heroku 
 - On main page select 'create new app'
 - Choose a unique name for the app. And choose region
@@ -122,7 +124,7 @@ Upon final build of code, a heroku app was created and by using the following st
 - Add buildpacks for "Python" and "Node.js" ensuring that Pythons buildpack is deployed first
 - Navigate to the deploy tab. And deploy from Github Repository
 - Scroll to bottom of the page and select "Enable Automatic Deploys" 
-- Deployed Project Here - (Play the game)[www.hangman] 
+- Deployed Project Here - (Play the game)[https://ci-project3.herokuapp.com/] 
 
 ### Credits
 
