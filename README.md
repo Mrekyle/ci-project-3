@@ -1,6 +1,6 @@
 # Hangman
 
-Click here to see the live [Hangman Game](https://ci-project3.herokuapp.com/)
+Click here to see the live - [Hangman Game](https://ci-project3.herokuapp.com/)
 
 Hangman is a traditional game that has been around through the ages. Testing the knowledge of your opponents spelling. 
 Either played online against a computer or against a friend on paper. But this version is all online and built and designed to run 
@@ -124,7 +124,7 @@ HEROKU:
 - Add buildpacks for "Python" and "Node.js" ensuring that Pythons buildpack is deployed first
 - Navigate to the deploy tab. And deploy from Github Repository
 - Scroll to bottom of the page and select "Enable Automatic Deploys" 
-- Deployed Project Here - (Play the game)[https://ci-project3.herokuapp.com/] 
+- Deployed Project Here - [Play the game](https://ci-project3.herokuapp.com/) 
 
 ### Credits
 
