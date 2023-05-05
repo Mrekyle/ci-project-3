@@ -69,7 +69,19 @@ In the development of this project multiple technoligies were used to allow ever
 
 During the development of the game. There were may tests that were made along the way to ensure everything was working as intended and going to plan. 
 
-TABLE TO GO HERE
+| Test | Steps Taken | Expected outcome | Result |
+|------------------------------------------------|
+| See Game Instructions | Testing pressing 'y' and 'n' to see if they show or go to the next step in the game | If 'y' pressed game insturctions appear. If 'n' Pressed enter username appears | As expected |
+| Enter Valid Username | Entering various spelling/spelling mistakes/numbers into the terminal to test the output of the game | When a valid username is entered it will start the game. If amn invalid username is entered it will raise a ValueError and reset the enter username part of the game. | As Expected |
+| Personalised welcome message | Running the game | Displys a message with the users inputted username | As Expected |
+| Select Difficulty | Testing the different difficulty selections | Changes the difficulty of the game, selecting different words based on the selected difficulty | As Expected | 
+| Guess a letter | Inputting letters | Checks if the input is valid | As expected |
+| Guess correct | Inputting correct guesses | Checks the letter, Displays correct message | As Expected |
+| Guess incorrect | Inputting numbers/incorrect letters | Checks invalid entry, outputs wrong message and displays updated hangman image | As Expected |
+| Multiple guess | Repeating the guessed letter | Entering the same letter multiple times. Display already guessed message | As Expected |
+| Win | Entering the correct answer | Displays the congratulations message and that the user survived | As Expected |
+| Loose | Entering the incorrect answer | Displays the 'dead' hangman and loose message | As Expected |
+| Restart Game | Entering the 'y' and 'n' key to restart or end the game | Restart the game when 'y' is entered or end the game when 'n' is entered | As Expected |
 
 Once the game was completed and everything was running as intended. The code was then put through CI pip8 Python testing. Despite having long line errors. There are no other present python code errors. All issues apart from the long line errors were fixed before deployment.
 
