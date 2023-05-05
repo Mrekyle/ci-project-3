@@ -33,7 +33,7 @@ Trying to beat the gallows to win the game.
 
 The design and flow of the game was laid out before work on the codeing of the game begin. This was done to allow a clear direction in what way the game flows throughtout the users progress. Also then being able to determine what main functions are needed and what functions need to link together to allow the game to run as intended.
 
-<img src="docs/ci-p3.png" height="500px" width="450px" alt="A flow diagram of the hangman game application.">
+<img src="docs/ci-p3.png" height="500px" width="650px" alt="A flow diagram of the hangman game application.">
 
 ### Features
 
@@ -71,7 +71,7 @@ During the development of the game. There were may tests that were made along th
 
 TABLE TO GO HERE
 
-Once the game was completed and everything was running as intended. The code way put through CI pip8 Python testing. 
+Once the game was completed and everything was running as intended. The code was then put through CI pip8 Python testing. Despite having long line errors. There are no other present python code errors. All issues apart from the long line errors were fixed before deployment.
 
 <img src="docs/pip8-testing.png" height="300px" width="400px" alt="Code Institute pip8 Testing">
 
@@ -95,7 +95,22 @@ During the development there were many bugs despite the constant testing of the 
 
 Deployment of the game was done by using Heroku. Whilst hosting the files Github and linking the two together. 
 
-STEP BY STEP INSTRUCTIONS
+GITHUB:
+
+- Repository created using the CI P3 Template
+- Code pushed up to github thoughout development
+
+Upon final build of code, a heroku app was created and by using the following steps, the game was deployed.
+
+- Login to Heroku 
+- On main page select 'create new app'
+- Choose a unique name for the app. And choose region
+- Once app has been created, navigate to settings - config vars
+- Clicking on reveal config vars and add "PORT"  value "8000" 
+- Add buildpacks for "Python" and "Node.js" ensuring that Pythons buildpack is deployed first
+- Navigate to the deploy tab. And deploy from Github Repository
+- Scroll to bottom of the page and select "Enable Automatic Deploys" 
+- Deployed Project Here - (Play the game)[www.hangman] 
 
 ### Credits
 
