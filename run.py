@@ -18,21 +18,20 @@ def game_instructions():
     Displays the games instructions based on the users input
     """
 
-    instructions = input('Would you like to see the games instructions Y/N? \n')
+    game_instructions_txt = input('Would you like to see the games instructions Y/N? \n')
 
-    while instructions.lower() not in ["y", "n"]:
-        instructions = input("Enter 'y' to show gamne instructions of 'n' to skip.\n ")
+    while game_instructions_txt.lower() not in ["y", "n"]:
+        game_instructions_txt = input("Enter 'y' to show gamne instructions or 'n' to skip.\n ")
 
-    if instructions.lower() == "y":
+    if game_instructions_txt.lower() == "y":
         instructions_text = [
-            "First select a difficulty level. Beginner, Novice, Advanced, Insanity?\n",
-            "To win the game guess all the correct characters in the word\n",
-            "Correct guess reveals the letter\n",
+            "\nFirst select a difficulty level. Beginner, Novice, Advanced, Insanity?",
+            "To win the game guess all the correct letters in the hidden word",
+            "Correct guess reveals the letter",
             "Wrong guess adds to the man being hung\n"
         ]
         for _ in instructions_text:
-            print("Lets Get Started")
-            break
+            print((_))
 
 
 def new_player():
