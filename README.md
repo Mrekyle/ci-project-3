@@ -31,6 +31,10 @@ Trying to beat the gallows to win the game.
 
 ### Logic Flow Chart
 
+The design and flow of the game was laid out before work on the codeing of the game begin. This was done to allow a clear direction in what way the game flows throughtout the users progress. Also then being able to determine what main functions are needed and what functions need to link together to allow the game to run as intended.
+
+<img src="docs/ci-p3.png" height="500px" width="450px" alt="A flow diagram of the hangman game application.">
+
 ### Features
 
 The current features in the game are as follows. Allowing for the game to function as intended. 
@@ -69,7 +73,7 @@ TABLE TO GO HERE
 
 Once the game was completed and everything was running as intended. The code way put through CI pip8 Python testing. 
 
-<img src="docs/pip8-testing.png" height="350px" width="400px" alt="Code Institute pip8 Testing">
+<img src="docs/pip8-testing.png" height="300px" width="400px" alt="Code Institute pip8 Testing">
 
 ### Bugs/Bug Fixes
 
@@ -77,15 +81,15 @@ During the development there were many bugs despite the constant testing of the 
 
 - Game not showing the game instructions despite the user enter 'y' to view them.
 
-<img src="" height="350px" width="400px" alt="Code before the bug fix">
+<img src="docs/gameinstructions-bug.png" height="300px" width="400px" alt="Code before the bug fix">
 
-<img src="" height="350px" width="400px" alt="Code after the bug fix">
+<img src="docs/gameinstructions-fix.png" height="300px" width="400px" alt="Code after the bug fix">
 
 - Game not restarting when the user entered 'y' to restart the game at the end of the game. 
 
-<img src="" height="350px" width="400px" alt="Code before re writing to fix the error">
+<img src="docs/gamerestart-bug.png" height="300px" width="400px" alt="Code before re writing to fix the error">
 
-<img src="" height="350px" width="400px" alt="Code after the re writing enabaling the bug to be removed">
+<img src="docs/gamerestart-bug-png" height="300px" width="400px" alt="Code after the re writing enabaling the bug to be removed">
 
 ### Deployment
 
